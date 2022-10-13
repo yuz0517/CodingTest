@@ -8,3 +8,4 @@ int main(){
     cout<<d1/d2;
     return 0;
 }
+//https://tech-yuyu.tistory.com/29
