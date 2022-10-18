@@ -29,10 +29,6 @@ int pop(struct stack *S){
         return temp;
     }
 }
-int empty(struct stack *S){
-    if(S->top == -1) return 1;
-    else return 0;
-}
 int main()
 {
     ios_base::sync_with_stdio(false);
