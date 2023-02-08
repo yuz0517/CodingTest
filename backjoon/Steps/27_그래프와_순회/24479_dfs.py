@@ -1,4 +1,4 @@
-#dfs를 recursion으로 구현 -> boj 에서 런타임 에러 남. 재귀를 쓰지 않고 구현해야함
+
 import sys
 from collections import deque
 
@@ -8,17 +8,24 @@ def dfs(graph, start, visited,n,count):
   
   global ordernum
   queue = deque([start])
-  visited[start] = True
+
   queue.append(start)
 
-  ordernum += 1
-  count[start] = ordernum
+  
       
- 
-    if not visited[i]:
+  while(queue):
    
+    i = queue.pop()
+
+
+    if not visited[i]:
+
       visited[i] = True
-      
+
+      ordernum += 1
+      count[i] = ordernum
+      graph[i].sort(reverse=True)
+      queue.extend(graph[i])
    
   #print(queue)
  
