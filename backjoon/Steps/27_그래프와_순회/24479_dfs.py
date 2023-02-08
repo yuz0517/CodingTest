@@ -1,4 +1,3 @@
-
 import sys
 from collections import deque
 
@@ -49,8 +48,7 @@ for i in range(m) :
   graph[a].append(b)
   graph[b].append(a)
 
-for i in range(n+1):
-    graph[i].sort()
+
 visited = [False] * (int(n)+1)
 count = [0] * (len(visited))
 
